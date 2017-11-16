@@ -26,10 +26,9 @@ passport.deserializeUser(function(obj, done) {
 //  }));
 
 passport.use(new GitHubStrategy({
-    clientID: 'b7bfd7fcc56fdb76ad7f',
-    clientSecret: '02de06a1c53b5d6aa9d5d805af6b936b42381ddd',
-    callbackURL: "http://note.ruoyu.site/auth/github/callback"
-    //callbackURL: "http://localhost:8080/auth/github/callback"
+    clientID: '2bc089a3de881bd85d92',
+    clientSecret: '77595c04a17fe7c54853d3ef26179de6fdad1f2f',
+    callbackURL: "http://cwhh.ltd:3799/auth/github/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // User.findOrCreate({ githubId: profile.id }, function (err, user) {
@@ -40,8 +39,7 @@ passport.use(new GitHubStrategy({
 
 
 
-router.get('/github',
-  passport.authenticate('github'));
+router.get('/github',passport.authenticate('github'));
 
 router.get('/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
