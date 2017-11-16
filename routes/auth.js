@@ -29,7 +29,7 @@ passport.use(new GitHubStrategy({
     clientID: 'b7bfd7fcc56fdb76ad7f',
     clientSecret: '02de06a1c53b5d6aa9d5d805af6b936b42381ddd',
     callbackURL: "http://note.ruoyu.site/auth/github/callback"
-    //callbackURL: "http://localhost:3000/auth/github/callback"
+    //callbackURL: "http://localhost:8080/auth/github/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // User.findOrCreate({ githubId: profile.id }, function (err, user) {
